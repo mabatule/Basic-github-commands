@@ -189,27 +189,27 @@ Ojo: Git no te dice que tienes stash
 ### 41. Git rebase iteractivo este ejemplo es para unir dos commits que son parecidos en mensaje
 ##### Este comando toma 4 commits antes del Head
 	    git rebase -i HEAD~4 
-	[img4]
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/imagen%204.png?raw=true" width="600px" height="500px">
 ##### aqui se puede ver los 4 commits tomados ahora con los comandos ayuda escribimos squash que lo que hace es unir con el commit anterior
-	img 5
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%205.png?raw=true" width="600px" height="500px">
 ##### luego aparecera con que mensaje se quedara la union del commit
-	img 6
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%206.png?raw=true" width="600px" height="500px">
 ##### resultado
-	img 7
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%207.png?raw=true" width="600px" height="500px">
 ### 42. Git rebase iteractivo este ejemplo para cambiar el mensaje de un commit
 ##### Este comando toma 4 commits antes del Head
 	git rebase -i HEAD~4 
 ##### Primero se coloca reword en el pick y luego Esc + : + wq!
-	img 8
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%208.png?raw=true" width="600px" height="500px">
 ##### Luego de esto aparecera a esos dos que se colocaron reword para actualizar sus mensajes 
 
 ### 43. Como separar un commit que hice por accidente con Rebase
 ##### Este comando toma 4 commits antes del Head
 	    git rebase -i HEAD~4
 ##### En la ventana siguiente reemplazamos al pick por un edit y asi entrara en modo rebase
-	img 9
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%209.png?raw=true" width="600px" height="500px">
 ##### Ahora que estara en modo rebase en el cual ahora combinamos el reset para volver y ahora si nos aparece en el stage los dos archivos modificados y simplemente los commiteamos cada uno
-	img 10
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%2010.png?raw=true" width="600px" height="500px">
 
 # GitHub
 ### 43. comando para subir los tags
@@ -232,7 +232,7 @@ Ojo: Git no te dice que tienes stash
 ##### ahora para cuandoo hacemos 
 		git remote -v
 ##### con este comando podemos ver nuestro repositorio
-	    img 11
+<img src="https://github.com/mabatule/Basic-github-commands/blob/main/image%20examples/img%2011.png?raw=true" width="600px" height="500px">
 ##### para hacer un pull del repositorio original primero tenemos que agragarlo con upstream
 		git remote add upstream <url del respositorio> <nombre de la rama que quiero traer los datos>
 ##### ahora para actualizar hacemos
