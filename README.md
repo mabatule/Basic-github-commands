@@ -155,3 +155,93 @@ ahora que significan eso numeros
         git tag -a <nommbre del tag> -m "mensaje del tag"
 ### 33. Mostrar mas informacion de un tag
         git show <nombre del tag>
+### 34. Stash es un lugar como un banco donde se guarda todo lo que estabas trabajando y no estaba con commit con el siguiente comando guardas en el Stash
+	    git stash
+### 35. Desplegar mi Stash
+	    git stash pop
+### 35. Muestra la lista de Stash que tengo
+Ojo: Git no te dice que tienes stash
+	    git stash list
+### 36. Borrar todos los stash
+	    git stash clear
+### 37. Recuperar un Stash determinado
+	stash@{0}: WIP on master: 9c2799a conflictos en stash resuelto
+	stash@{1}: WIP on master: 9c2799a conflictos en stash resuelto
+	stash@{2}: WIP on master: 9c2799a conflictos en stash resuelto
+#### Comando
+	    git stash apply <codigo del stash>
+#### Ejemplo
+	    git stash apply stash@{0}
+### 37. Borrar un Stash determinado
+	    git stash drop stash@{0}
+
+### 38. Muestra un poco de la informacion de un stash
+	    git stash show stash@{1}
+#### Resultado
+	villanos.md | 1 +
+ 	1 file changed, 1 insertion(+)
+### 38. Guardar un Stash pero ahora con nombre o mensaje
+	    git stash save "Inserte el mensaje aqui"
+### 39. Muesta mas informacion de los Stash
+	    git stash list --stat
+### 40. Git Rebase
+	    git rebase <nombre de la rama
+### 41. Git rebase iteractivo este ejemplo es para unir dos commits que son parecidos en mensaje
+##### Este comando toma 4 commits antes del Head
+	    git rebase -i HEAD~4 
+	[img4]
+##### aqui se puede ver los 4 commits tomados ahora con los comandos ayuda escribimos squash que lo que hace es unir con el commit anterior
+	img 5
+##### luego aparecera con que mensaje se quedara la union del commit
+	img 6
+##### resultado
+	img 7
+### 42. Git rebase iteractivo este ejemplo para cambiar el mensaje de un commit
+##### Este comando toma 4 commits antes del Head
+	git rebase -i HEAD~4 
+##### Primero se coloca reword en el pick y luego Esc + : + wq!
+	img 8
+##### Luego de esto aparecera a esos dos que se colocaron reword para actualizar sus mensajes 
+
+### 43. Como separar un commit que hice por accidente con Rebase
+##### Este comando toma 4 commits antes del Head
+	    git rebase -i HEAD~4
+##### En la ventana siguiente reemplazamos al pick por un edit y asi entrara en modo rebase
+	img 9
+##### Ahora que estara en modo rebase en el cual ahora combinamos el reset para volver y ahora si nos aparece en el stage los dos archivos modificados y simplemente los commiteamos cada uno
+	img 10
+
+# GitHub
+### 43. comando para subir los tags
+    	git push --tags
+
+### 44. Actualizar 
+	    git pull
+### 45. Actualizar si hay conflictos
+	    git pull --rebase
+
+### 46. Subir cambios locales
+	    git push
+### 47. Comando para ver donde esta apuntando mi repositorio
+	    git remote -v
+
+### 48. Git Fetch actualizar las referencias locales
+	    git fetch
+
+### 49. Flork basicamente es clonar un repositorio y crearlo en mi repositorio manteniendo los historial de los commits
+##### ahora para cuandoo hacemos 
+		git remote -v
+##### con este comando podemos ver nuestro repositorio
+	    img 11
+##### para hacer un pull del repositorio original primero tenemos que agragarlo con upstream
+		git remote add upstream <url del respositorio> <nombre de la rama que quiero traer los datos>
+##### ahora para actualizar hacemos
+		git pull upstream
+### 50. Para traer todos los cambios incluyendo la rama de otro compañero
+		git pull --all
+### 51. Ver todas las ramas de mi repositorio
+		git branch -a
+### 52. Limpiar ramas que ya no son necesarias y no existen en mi repositorio 
+		git remote prune origin
+### 53. Issues sirve para hacer preguntas al codigo y tambien recomendaciones en el cual se pueden resolver o no, ahora para marcar una solucion de un Issues se hace asi:
+		git commit -am "Fixes #5: mensaje cualquiera"
